@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Shopy</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/popup.css">
+        <link rel="stylesheet" href="css/mobile.css">
+        <link rel="stylesheet" href="css/media-queries.css">
+        <link rel="stylesheet" href="css/pagination.css">
+        <!--<link rel="stylesheet" href="lightbox.css">-->
+    </head>
+    <body>
+        <header id="desktop">
+            <img id="logo" src= "img/שרוֹכשוֹפ.png" alt="שרוכשופ">
+            <div class="header-center">
+                <input id="search" type="text" placeholder="חפשו בגדים, אביזרים ועוד">
+                <i class="fa fa-search fa-2x" aria-hidden="true"></i>
+            </div>
+                <p>סל קניות (<span class="cart-items">0</span> פריטים)
+                    <i class="fa fa-shopping-bag fa-2x" aria-hidden="true">
+                        <span id="items-on-cart" class="cart-items">0</span>
+                    </i>
+                </p>
+        </header>
+        
+        <header id="mobile">
+            <i class="fa fa-shopping-bag fa-2x" aria-hidden="true">
+                <span id="items-on-cart" class="cart-items mobile-cart">0</span>
+            </i>
+            <h1>SHOPPY</h1>
+            <div id="nav-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </header>
+            <nav id="mobile-menu" class="hide-mobile-nav">
+                <ul>
+                    <li>יוניסקס</li>
+                    <li>גברים</li>
+                    <li>נשים</li>
+                    <li>נוער</li>
+                    <li>ילדים</li>
+                </ul>
+            </nav>
+        <!--<hr>-->
+        <main>
+            <section class="header">
+                <nav id="desktop-menu">
+                    <ul>
+                        <li tabindex="0">יוניסקס</li>
+                        <li tabindex="0">גברים</li>
+                        <li tabindex="0">נשים</li>
+                        <li tabindex="0">נוער</li>
+                        <li tabindex="0">ילדים</li>
+                    </ul>
+                </nav>
+                <div class="organize-products">
+                    <p><span tabindex="0">מהזול ליקר <i class="fa fa-angle-down"></i></span>
+                        <i tabindex="0" class="fa fa-table" aria-hidden="true"></i>
+                        <i class="fa fa-th" aria-hidden="true"></i>
+                    </p>
+                </div>
+            </section>
+            <section class="body">
+            </section>
+            <section class="body-footer">
+                <div id="pagination"></div>
+            </section>
+        </main>
+        <footer>
+            <!--<div class="top-part">-->
+            <section class="top-footer">
+                <div class="logo-container">
+                    <img src="img/library-logo.png" alt="library logo" width="100%">
+                </div>
+                <section class="middle section">
+                    <div class="title">
+                        <p><u>הכותבים שלנו</u></p>
+                    </div>
+                    <div class="links">
+                        <ul>
+                            <li tabindex="0" class="list-item">כותב 1</li>
+                            <li tabindex="0" class="list-item">כותב 2</li>
+                            <li tabindex="0" class="list-item">כותב 3</li>
+                        </ul>
+                        <ul>
+                            <li tabindex="0" class="list-item">כותב 1</li>
+                            <li tabindex="0" class="list-item">כותב 2</li>
+                            <li tabindex="0" class="list-item">כותב 3</li>
+                        </ul>
+                        <ul>
+                            <li tabindex="0" class="list-item">כותב 1</li>
+                            <li tabindex="0" class="list-item">כותב 2</li>
+                            <li tabindex="0" class="list-item">כותב 3</li>
+                        </ul>
+                        <ul>
+                            <li tabindex="0" class="list-item">כותב 1</li>
+                            <li tabindex="0" class="list-item">כותב 2</li>
+                            <li tabindex="0" class="list-item">כותב 3</li>
+                        </ul>
+                    </div>
+                </section>
+            </section>
+            <!--</div>-->
+            <section class="bottom-footer">
+                    <p>כל הזכויות שמורות לספרייה הלאומית &copy; 2016</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/NationalLibraryIsrael/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="https://twitter.com/nlisrael"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/nli_israel/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                </div>
+            </section>
+        </footer>
+
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/product.js"></script>
+        <script src="js/popup.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/pagination.js"></script>
+        <!--<script src="lightbox.js"></script>-->
+    </body>
+</html>

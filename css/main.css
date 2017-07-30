@@ -1,0 +1,316 @@
+/*@import url(https://fonts.googleapis.com/earlyaccess/opensanshebrew.css);*/
+/*@import url(fonts/myriad-hebrew.otf);*/
+
+@font-face {
+    font-family: 'Myriad Hebrew';
+    src: url(../fonts/myriad-hebrew.otf);
+}
+
+@font-face {
+    font-family: 'Kano';
+    src: url(../fonts/Kano.otf);
+}
+
+@font-face {
+    font-family: 'MuseoSansCyrl';
+    src: url(../fonts/MuseoSansCyrl.otf);
+}
+
+@font-face {
+    font-family: 'Open Sans Hebrew';
+    src: url(../fonts/OpenSansHebrew.ttf);
+}
+
+:root{
+    --main-section-width: 70%;
+}
+
+html{
+    direction: rtl;
+}
+
+body{
+    margin:0;
+    background-color: #EBF4FB;
+}
+
+header#desktop{
+    display:flex;
+    justify-content: space-between;
+    border-bottom: 1px solid lightgray;
+    padding: 1rem;
+    align-items: center;
+}
+
+header#desktop p{
+    /*font-family: 'Assistant', sans-serif;*/
+    font-family: 'Myriad Hebrew',sans-serif;
+    font-weight: 800;
+}
+
+header#desktop p:hover{
+    cursor: pointer;
+}
+
+header img#logo{
+    background-color: white;
+}
+
+header div.header-center{
+    position: relative;
+    width: 35%;
+}
+
+header#desktop div.header-center input#search{
+    width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: .5rem;
+    /*font-family: 'Arimo', sans-serif;*/
+    font-family: 'Open Sans Hebrew', serif;
+    letter-spacing: -0.5px;
+}
+
+header#desktop div.header-center i.fa-search{
+    position: absolute;
+    bottom: 4.5px;
+    left: -13px;
+    color: #669BFC;
+}
+
+header#desktop img#logo{
+    border: 1px solid gray;
+    border-bottom-width: 1.5px;
+    border-right-width: 1.5px;
+    padding: .5rem;
+}
+
+header#desktop i.fa-shopping-bag{
+    position: relative;
+}
+
+header#desktop span#items-on-cart{
+    position: absolute;
+    font-size: 1rem;
+    font-family: 'Myriad Hebrew',sans-serif;
+    left: -0.2rem;
+    bottom: .6rem;
+    background-color: #4e80f2;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    padding: 6px;
+    height: 5px;
+    width: 7px;
+    line-height: 5px;
+}
+
+
+main{
+    width: var(--main-section-width);
+    margin: 0 auto;
+    padding-bottom: 10%;
+}
+main section.header{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 1.5rem;
+    font-family: 'Myriad Hebrew',sans-serif;
+
+}
+
+main section.header nav#desktop-menu ul{
+    height: 100%;
+    margin: 0;
+}
+
+main section.header nav#desktop-menu ul li{
+    outline: none;
+    line-height: 50px;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+}
+
+main section.header ul li:hover{
+    cursor: pointer;
+}
+
+main section.header div.organize-products i:hover, main section.header div.organize-products span:hover{
+    cursor: pointer;
+}
+
+main section.header div.organize-products p{
+    font-weight: 800;
+}
+
+main section.body{
+    direction: ltr;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main section.body div.product{
+    /*width: calc(var(--main-section-width)/3);*/
+    width: 33.33%;
+    text-align: center;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+main section.body div.product div.product-image{
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+main section.body div.product div.product-image img{
+    max-width: 100%;
+    width:auto;
+    height:auto;
+}
+
+main section.body div.product:hover{
+     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+     cursor: pointer;
+}
+
+main section.body div.product div.product-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 1rem;
+    /*font-family: 'Kano', sans-serif;*/
+}
+
+main section.body div.product div.product-description, main section.body div.product div.product-header{
+    font-family: 'Kano', sans-serif;
+    text-transform: uppercase;
+}
+main section.body div.product div.product-description h3{
+    margin-top: 0;
+}
+
+main section.body div.product div.product-header i{
+    font-size: 1.5rem;
+}
+
+main section.body div.product span.product-price{
+    font-weight: bold;
+    /*padding: 1rem;*/
+    font-family: 'MuseoSansCyrl';
+    font-size: 1.3rem;
+}
+
+main section.body div.product div.product-price-container{
+    padding-bottom: 2rem;
+}
+main section.body div.product span.product-discount-price{
+    font-weight: bold;
+    font-family: 'MuseoSansCyrl';
+    text-decoration: line-through;
+    font-size: 0.8rem;
+}
+
+main section.header nav{
+    width: 30%;
+}
+
+main section.header nav#desktop-menu ul{
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+main section.body{
+    background-color:white;
+}
+
+main section.body-footer{
+    text-align: center;
+    padding-top: 3rem;
+    font-family: 'Open Sans Hebrew';
+}
+
+footer{
+    background-color: white;
+    margin: 0 auto;
+    font-family: 'Myriad Hebrew', sans-serif;
+}
+
+footer section.top-footer{
+    display: flex;
+    border-top: 1px solid black;
+    font-family: 'Open Sans Hebrew', serif;
+    padding-top: 2.5rem;
+}
+
+footer section.top-footer, section.bottom-footer{
+    width: 80%;
+    margin: 0 auto;
+}
+
+footer section.top-footer div.links{
+    display: flex;
+    justify-content: space-between;
+}
+
+footer section.top-footer div.logo-container{
+    width: 300px;
+    margin-left: 1rem;
+}
+
+footer section.top-footer section.middle{
+    width: 70%;
+}
+
+footer section.top-footer section.middle p{
+    margin: 0;
+}
+
+footer section.bottom-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+footer section.bottom-footer div.social-links i{
+    margin: 5px;
+    background-color: #1D6799;
+    border-radius: 50%;
+    text-align: center;
+    padding: 10px;
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    color: white;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+.show{
+    display: flex;
+}
+
+.hide{
+    display: none !important;
+}
+
+.highlight, .highlight_stay{
+    color:#4C7ADF;
+}
+
+.underline-border{
+    border-bottom: 2px solid #4C7ADF;
+}
+
+.active{
+    background-color: white;
+}

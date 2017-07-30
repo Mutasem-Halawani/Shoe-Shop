@@ -1,0 +1,112 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jul 29, 2017, 1:59:15 PM
+    Author     : mutasem
+*/
+
+@font-face {
+    font-family: 'MuseoSansCyrl';
+    src: url(../fonts/MuseoSansCyrl.otf);
+}
+
+@font-face {
+    font-family: 'Myriad Hebrew';
+    src: url(../fonts/myriad-hebrew.otf);
+}
+
+header#mobile{
+    display: none;
+    /*display: flex;*/
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.7rem;
+    font-family: 'MuseoSansCyrl';
+    padding-right: 0.4rem;
+    padding-left: 0.4rem;
+    background-color: white;
+}
+
+header#mobile h1{
+    letter-spacing: 2px;
+}
+
+header#mobile i.fa-shopping-bag{
+    position: relative;
+}
+
+header#mobile i.fa-shopping-bag:hover{
+    cursor: pointer;
+}
+
+header#mobile span.mobile-cart{
+    position: absolute;
+    font-family: 'Myriad Hebrew';
+    color: white;
+    background-color: black;
+    font-size: 1rem;
+    border-radius: 50%;
+    text-align: center;
+    padding: 5px;
+    height: 2px;
+    width: 6px;
+    line-height: 4px;
+    bottom: .5rem;
+    right: 0.7rem;
+}
+    
+header#mobile div#nav-icon{
+    direction: ltr;
+}
+
+header#mobile div#nav-icon:hover{
+    cursor: pointer;
+}
+
+header#mobile div#nav-icon span{
+    display: flex;
+    flex-direction: column;
+    width: 1.5rem;
+    height: 0.2rem;
+    background-color: black;
+    margin: 6px 0;
+}
+
+header#mobile div#nav-icon span:nth-child(2){
+    width: 1rem;
+}
+
+header#mobile div#nav-icon span:nth-child(3){
+    width: 1.2rem;
+}
+
+.show-mobile-nav{
+    display: block;
+}
+
+.hide-mobile-nav{
+    display: none;
+}
+
+nav#mobile-menu{
+    transition:all 1s;
+}
+nav#mobile-menu ul{
+    margin: 0;
+    font-family: 'Myriad Hebrew',sans-serif;
+}
+
+nav#mobile-menu ul li{
+    display: block;
+    text-align: center;
+    border-bottom: 1px solid lightgray;
+    padding: 0.7rem;
+}
+
+nav#mobile-menu ul li:hover{
+    cursor: pointer;
+}
+

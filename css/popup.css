@@ -1,0 +1,170 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jul 27, 2017, 10:54:30 PM
+    Author     : mutasem
+*/
+
+@font-face{
+    font-family: 'Myriad';
+    src: url(../fonts/MyriadPro.otf);
+    font-weight: normal;
+}
+
+div#popup-container{
+    position:fixed;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(32,32,32,0.8);
+}
+
+div.product-popup{
+    width: 33%;
+    padding: 1rem;
+    background-color: white;
+    padding-bottom: 4rem;
+    box-shadow: 0 0 25px black;
+}
+
+div.product-header{
+    position: relative;
+}
+
+div.product-popup div.product-description h3,div.product-popup div.product-header h2{
+    text-transform: uppercase;
+    font-family: arial;
+}
+div.product-popup div.product-header h2{
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+div.product-popup div.product-description h3{
+    font-weight: 100;
+}
+
+div.product-popup div.product-image{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    position: relative;
+}
+
+div.product-popup div.product-image i{
+    background-color: #7f7f7f;
+    border-radius: 50%;
+    text-align: center;
+    padding: 13px;
+    height: 25px;
+    width: 25px;
+    line-height: 24px;
+    color:white;
+}
+
+div.product-popup div.product-price-container{
+    padding-bottom: 2rem;
+}
+div.product-popup span.product-discount-price{
+    font-weight: bold;
+    font-family: 'MuseoSansCyrl';
+    text-decoration: line-through;
+    font-size: 0.8rem;
+}
+
+div.product-popup span.product-price{
+    font-weight: bold;
+    font-family: 'MuseoSansCyrl';
+    font-size: 1.3rem;
+}
+
+div.product-popup div.product-image i.fa-angle-right:hover, div.product-popup div.product-image i.fa-angle-left:hover{
+    cursor: pointer;
+}
+
+div.product-popup div.product-image i.fa-angle-right{
+    position: absolute;
+    right: 0;
+    bottom: 5.7rem;
+}
+
+div.product-popup div.product-image i.fa-angle-left{
+    position: absolute;
+    left: 0;
+    bottom: 6rem;
+}
+
+div.product-popup div.product-image img{
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+    
+div.product-price{
+    font-family: Arial,Sans-Serif;
+    font-size: 2.5rem;
+}
+
+div.product-lightbox{
+    text-align: center;
+}
+
+span.close-popup{
+    position: absolute;
+    left: 0;
+    top: -2.5rem;
+}
+
+span.close-popup:hover{
+    cursor: pointer;
+}
+
+div.popup-footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+button.btn{
+    background: none;
+    border: 1px solid #5A93FC;
+    outline: none;
+    border-radius: 0.25rem;
+    color: #5A93FC;
+    background-color: white; 
+    width: 100%;
+    padding: 0.6rem 2rem;
+    font-size: 1.1rem;
+    font-family: 'Myriad',sans-serif;
+}
+
+button.add-to-cart-btn{
+    margin-top: 1rem;
+}
+
+button.add-to-fav-btn{
+    margin-top: 1rem;
+}
+
+button.btn:hover{
+    color: white;
+    background-color: #5A93FC; 
+    cursor: pointer;
+}
+
+div.popup-footer{
+    width: 45%;
+    margin: 0 auto;
+}
+
+span.close-popup{
+    z-index: 100;
+}
