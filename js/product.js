@@ -28,6 +28,8 @@ var products = [
     }
 ];
 
+function buildProducts(){
+    
 for (let i=0;i<products.length;i++) {
     var productContainer = $('<div>',{
        'data-product-id': products[i].id,
@@ -93,4 +95,5 @@ for (let i=0;i<products.length;i++) {
        text: products[i].price
    });
    productPrice.appendTo(productPriceCont);
+}
 }

@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 
-
 function buildPopup(id){
     
     var index = id -1;
@@ -155,15 +154,4 @@ function buildPopup(id){
         $('.cart-items').html(cartProducts.length);
     });
 }
-
-
-
-
-
-
-
-
-
-
-
 

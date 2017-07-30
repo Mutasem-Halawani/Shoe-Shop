@@ -50,9 +50,9 @@ var Pagination = {
     Click: function() {
         Pagination.page = +this.innerHTML;
         Pagination.Start();
-        $('')
-        console.log(this);
-        console.log($('a.current').text());
+//        $('')
+//        console.log(this);
+//        console.log($('a.current').text());
     },
 
     // previous page
@@ -61,7 +61,7 @@ var Pagination = {
         if (Pagination.page < 1) {
             Pagination.page = 1;
         }
-        console.log(this);
+//        console.log(this);
         Pagination.Start();
     },
 
@@ -71,8 +71,10 @@ var Pagination = {
         if (Pagination.page > Pagination.size) {
             Pagination.page = Pagination.size;
         }
-        console.log($('a.current'));
+//        console.log($('a.current'));
         Pagination.Start();
+//        $('section.body').empty();
+//        buildProducts();
     },
 
     // --------------------
@@ -115,8 +117,6 @@ var Pagination = {
         }
         Pagination.Finish();
     },
-
-
 
     // --------------------
     // Initialization

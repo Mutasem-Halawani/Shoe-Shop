@@ -3,14 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
-
-//$('input').on('change',function(){
-//    console.log(this.value);  
-//});
-
-
-
+buildProducts();
 
 var cartProducts = [];
 var storedProducts = JSON.parse(localStorage.getItem("products"));
@@ -18,8 +11,9 @@ var storedProducts = JSON.parse(localStorage.getItem("products"));
 $( document ).ready(function() {
     $('.cart-items').html(storedProducts.length);
 });
-//adding to cart
 
+
+//adding to cart
 $('i.add-to-cart').on('click',function(e){
     e.stopPropagation();
     $(this).closest('div#popup-container');
@@ -29,22 +23,17 @@ $('i.add-to-cart').on('click',function(e){
     $('.cart-items').html(cartProducts.length);
 });
 
-//mobile
+//mobile nav
 $('div#nav-icon').on('click',function(){
-//    console.log('clicked');
     $('nav#mobile-menu').toggleClass(function(){
         return $(this).is('.show-mobile-nav ,.hide-mobile-nav') ? 'show-mobile-nav hide-mobile-nav' : 'show-mobile-nav';
     });
 });
-//mobile
-
 
 //popup
 $('div.product').on('click',function(){
     var itemID = $(this).closest('div').attr('data-product-id');
     buildPopup(itemID);
-    console.log($(this).closest('div').attr('data-product-id'));
-    console.log('function working');
 });
 
 //add to favs
@@ -52,7 +41,6 @@ $("i.add-to-fav").click(function (e) {
     e.stopPropagation();
     $(this).toggleClass('highlight');
 });
-//add to favs
 
 
 //nav
@@ -71,8 +59,6 @@ $('nav li').click(function(){
     $(this).addClass('underline-border');
 });
 });
-//nav
-
 
 //pages pagination
 $('div.pagination a.page').click(function(){
@@ -80,7 +66,6 @@ $('div.pagination a.page').click(function(){
 $('div.pagination a.page').removeClass('active');
 $(this).addClass('active');
 });
-//pages pagination
 
 
 //prevent window scroll on empty link click
@@ -100,4 +85,3 @@ document.onclick = function (e) {
         return false;
     }
 };
-//prevent window scroll on empty link click
