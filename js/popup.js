@@ -113,23 +113,23 @@ function buildPopup(id){
         if (id === '2'){
         $('div#popup-container').remove();
           buildPopup(1);
-       }
-       else if (id === '3'){
+        }
+        else if (id === '3'){
         $('div#popup-container').remove();
           buildPopup(2);
-       }
+        }
     });
     
     $('i.fa-angle-right').on('click',function(){
         var next = id + 1;
-       if (id === '1'){
-        $('div#popup-container').remove();
-          buildPopup(2);
-       }
-       else if (id === '2'){
-        $('div#popup-container').remove();
-          buildPopup(3);
-       }
+        if (id === '1'){
+         $('div#popup-container').remove();
+           buildPopup(2);
+        }
+        else if (id === '2'){
+         $('div#popup-container').remove();
+           buildPopup(3);
+        }
     });
     
     $('span.close-popup').on('click',function(e){
@@ -152,6 +152,14 @@ function buildPopup(id){
         console.log(cartProducts);
         localStorage.setItem("products", JSON.stringify(cartProducts));
         $('.cart-items').html(cartProducts.length);
+    });
+    
+    $('.add-to-fav-btn').on('click',function(){
+       var IDNum = parseInt(id);
+       var chosen  = $('div.product[data-product-id='+ IDNum +']');
+       var header = chosen.children()[0];
+       var heartIcon = $(header).find('i.add-to-fav');
+       heartIcon.addClass('highlight');
     });
 }
 
