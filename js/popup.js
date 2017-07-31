@@ -6,7 +6,8 @@
 
 function buildPopup(id){
     
-    var index = id -1;
+    products = productsNew;
+    var index = id;
     var popupContainer = $('<div>',{
         id: 'popup-container',
         'class': 'show'
@@ -68,7 +69,6 @@ function buildPopup(id){
 
     var leftArrow = $('<i>',{
        'class': 'fa fa-angle-left'
-//       'onclick' :'plusSlides(-1)'
     });
     leftArrow.appendTo(popupProductImage);
 
@@ -88,8 +88,6 @@ function buildPopup(id){
        text: products[index].price
     });
     popupProductPrice.appendTo(popupProductPriceCont);
-
-//    console.log('reached function');
 
     var popupFooter = $('<div>',{
         'class': 'popup-footer'
@@ -118,7 +116,7 @@ function buildPopup(id){
     
     $('i.fa-angle-right').on('click',function(){
         var next = parseInt(id) + 1;
-        if(next < 4){
+        if(next < (products.length)){
             buildPopup(next);
         }    
     });

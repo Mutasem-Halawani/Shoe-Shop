@@ -4,31 +4,57 @@
  * and open the template in the editor.
  */
 
-var products = [
-    {
-        'id' : 1,
-        'name' : 'ADIDAS SHOES BOXING',
-        'img' : 'img/shoes (7).png',
-        'discountPrice' : '',
-        'price' : '$375.21'
-    },
-    {
-        'id' : 2,
-        'name' : 'ADIDAS YEEZY BOOST',
-        'img' : 'img/Adidas-Yeezy-350-Boost-Black.png',
-        'discountPrice' : '',
-        'price' : '$196.18'
-    },
-    {
-        'id' : 3,
-        'name' : 'CONVERSE ALL STAR',
-        'img' : 'img/shoes (6).png',
-        'discountPrice' : '$168.00',
-        'price' : '$119.99'
-    }
-];
+var productsNew = [];
 
-function buildProducts(){
+function buildProductList(){
+    for (let i=0;i<12;i++){
+        productsNew[i] = {
+            'id' : i,
+            'name' : 'shoes' + i,
+            'img' : getRandomImage(),
+            'discountPrice' : '',
+            'price' : '$' + Math.ceil(getRandomPrice(100,400))
+        };
+    };
+};
+buildProductList();
+
+function getRandomPrice(min, max) {
+  return Math.random() * (max - min) + min;
+}
+
+function getRandomImage() {
+    let img  = Math.floor(Math.random() * 5) + 1;
+    switch (img) {
+        case 1:
+            return 'img/shoes (3).png';
+            break;
+        case 2:
+            return 'img/shoes (4).png';
+            break;
+        case 3:
+            return 'img/shoes (5).png';
+            break;
+        case 4:
+            return 'img/shoes (6).png';
+            break;
+        case 5:
+            return 'img/shoes (7).png';
+            break;
+        default:
+            return 'img/shoes (7).png';
+            break;
+    }
+}
+
+buildProducts(productsNew);
+
+function buildProducts(productset){
+    
+    if (typeof productset !== 'undefined') {
+         products = productset;
+    }
+    
     for (let i=0;i<products.length;i++) {
         var productContainer = $('<div>',{
            'data-product-id': products[i].id,
@@ -94,5 +120,11 @@ function buildProducts(){
            text: products[i].price
        });
        productPrice.appendTo(productPriceCont);
+       
+        $('div.product').on('click',function(){
+            var itemID = $(this).closest('div').attr('data-product-id');
+            buildPopup(itemID);
+            console.log('product clicked');
+        });
     }
 }

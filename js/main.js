@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-buildProducts();
 
 var cartProducts = [];
 var storedProducts = JSON.parse(localStorage.getItem("products"));
@@ -34,6 +33,7 @@ $('div#nav-icon').on('click',function(){
 $('div.product').on('click',function(){
     var itemID = $(this).closest('div').attr('data-product-id');
     buildPopup(itemID);
+    console.log('product clicked');
 });
 
 //add to favs

@@ -50,31 +50,37 @@ var Pagination = {
     Click: function() {
         Pagination.page = +this.innerHTML;
         Pagination.Start();
-//        $('')
-//        console.log(this);
-//        console.log($('a.current').text());
+        Pagination.MovePage();
     },
 
     // previous page
     Prev: function() {
+        if(Pagination.page !== 1){
+            Pagination.MovePage();
+        }
         Pagination.page--;
         if (Pagination.page < 1) {
             Pagination.page = 1;
         }
-//        console.log(this);
         Pagination.Start();
     },
 
     // next page
     Next: function() {
+        if (Pagination.page !== 21){
+            Pagination.MovePage();
+        }
         Pagination.page++;
         if (Pagination.page > Pagination.size) {
             Pagination.page = Pagination.size;
         }
-//        console.log($('a.current'));
         Pagination.Start();
-//        $('section.body').empty();
-//        buildProducts();
+    },
+    
+    MovePage: function(){
+            $('section.body').empty();
+            buildProductList();
+            buildProducts(productsNew);
     },
 
     // --------------------
