@@ -29,71 +29,70 @@ var products = [
 ];
 
 function buildProducts(){
-    
-for (let i=0;i<products.length;i++) {
-    var productContainer = $('<div>',{
-       'data-product-id': products[i].id,
-       'class': 'product'
-    });
-    productContainer.appendTo($('section.body'));
+    for (let i=0;i<products.length;i++) {
+        var productContainer = $('<div>',{
+           'data-product-id': products[i].id,
+           'class': 'product'
+        });
+        productContainer.appendTo($('section.body'));
 
-    var productHeader = $('<div>',{
-       'class': 'product-header'
-    });
-    productHeader.appendTo(productContainer);
+        var productHeader = $('<div>',{
+           'class': 'product-header'
+        });
+        productHeader.appendTo(productContainer);
 
-    var favIcon = $('<i>',{
-       'class': 'fa fa-heart add-to-fav' 
-    });
-    favIcon.appendTo(productHeader);
+        var favIcon = $('<i>',{
+           'class': 'fa fa-heart add-to-fav' 
+        });
+        favIcon.appendTo(productHeader);
 
-    var productTitle = $('<h2>',{
-       text: 'SHOES' 
-    });
-    productTitle.appendTo(productHeader);
+        var productTitle = $('<h2>',{
+           text: 'SHOES' 
+        });
+        productTitle.appendTo(productHeader);
 
-    var cartIcon = $('<i>',{
-       'class': 'fa fa-shopping-bag add-to-cart' 
-    });
-    cartIcon.appendTo(productHeader);
+        var cartIcon = $('<i>',{
+           'class': 'fa fa-shopping-bag add-to-cart' 
+        });
+        cartIcon.appendTo(productHeader);
 
 
-   var productDescription = $('<div>',{
-       'class': 'product-description'
-   });
-   productDescription.appendTo(productContainer);
+       var productDescription = $('<div>',{
+           'class': 'product-description'
+       });
+       productDescription.appendTo(productContainer);
 
-   var secondHeader = $('<h3>',{
-      text: products[i].name 
-   });
-   secondHeader.appendTo(productDescription);
+       var secondHeader = $('<h3>',{
+          text: products[i].name 
+       });
+       secondHeader.appendTo(productDescription);
 
-   var productImageCont = $('<div>',{
-       'class': 'product-image'
-   });
-   productImageCont.appendTo(productContainer);
+       var productImageCont = $('<div>',{
+           'class': 'product-image'
+       });
+       productImageCont.appendTo(productContainer);
 
-   var productImage = $('<img>',{
-      src: products[i].img,
-      alt: 'shoes'
-   });
-   productImage.appendTo(productImageCont);
+       var productImage = $('<img>',{
+          src: products[i].img,
+          alt: 'shoes'
+       });
+       productImage.appendTo(productImageCont);
 
-   var productPriceCont = $('<div>',{
-       'class': 'product-price-container'
-   });
-   productPriceCont.appendTo(productContainer);
+       var productPriceCont = $('<div>',{
+           'class': 'product-price-container'
+       });
+       productPriceCont.appendTo(productContainer);
 
-   var discountPrice = $('<span>',{
-      'class': 'product-discount-price',
-       text: products[i].discountPrice          
-   });
-   discountPrice.appendTo(productPriceCont);
+       var discountPrice = $('<span>',{
+          'class': 'product-discount-price',
+           text: products[i].discountPrice          
+       });
+       discountPrice.appendTo(productPriceCont);
 
-   var productPrice = $('<span>',{
-       'class': 'product-price',
-       text: products[i].price
-   });
-   productPrice.appendTo(productPriceCont);
-}
+       var productPrice = $('<span>',{
+           'class': 'product-price',
+           text: products[i].price
+       });
+       productPrice.appendTo(productPriceCont);
+    }
 }
