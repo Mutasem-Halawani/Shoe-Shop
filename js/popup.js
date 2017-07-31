@@ -4,8 +4,10 @@
  * and open the template in the editor.
  */
 
-function buildPopup(id){
+function buildPopup(id,key){
     
+//    console.log(id);
+//    console.log(key);
     products = productsNew;
     var index = id;
     var popupContainer = $('<div>',{
@@ -135,8 +137,10 @@ function buildPopup(id){
         }
     });
     
-    $('.add-to-cart-btn').on('click',function(e){
+    $('.add-to-cart-btn').on('click',function(e,key){
         var productNumber = parseInt(id);
+//        console.log(key);
+//        var productNumber = key;
         cartProducts.push(productNumber);
         console.log(cartProducts);
         localStorage.setItem("products", JSON.stringify(cartProducts));

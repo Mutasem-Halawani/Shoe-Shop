@@ -6,18 +6,25 @@
 
 var productsNew = [];
 
-function buildProductList(){
+function buildProductList(page){
+    if (page === 'undefined'){
+        page = 0;
+    }
     for (let i=0;i<12;i++){
+//        console.log(typeof(i));
+        uniqueID = parseInt(i + page.toString());
+//        console.log(uniqueID);
         productsNew[i] = {
-            'id' : i,
-            'name' : 'shoes' + i,
+            'id' : i ,
+            'key' : uniqueID,
+            'name' : 'shoes' + i + page,
             'img' : getRandomImage(),
-            'discountPrice' : '',
+            'discountPrice' : getDiscountPrice(),
             'price' : '$' + Math.ceil(getRandomPrice(100,400))
         };
     };
 };
-buildProductList();
+buildProductList(1);
 
 function getRandomPrice(min, max) {
   return Math.random() * (max - min) + min;
@@ -47,7 +54,23 @@ function getRandomImage() {
     }
 }
 
+function getDiscountPrice(){
+    let possiblity = Math.floor(Math.random() * 2) + 1;
+    let discountPrice =  Math.ceil(getRandomPrice(400,500));
+        switch (possiblity){
+            case 1:
+                return discountPrice;
+                break;
+            case 2:
+                return '';
+                break;
+            default:
+                return '';
+                break;
+        }
+}
 buildProducts(productsNew);
+//    productsNew.shift();
 
 function buildProducts(productset){
     
@@ -55,9 +78,12 @@ function buildProducts(productset){
          products = productset;
     }
     
+//    console.log(products);
+    
     for (let i=0;i<products.length;i++) {
         var productContainer = $('<div>',{
            'data-product-id': products[i].id,
+           'data-product-key': products[i].key,
            'class': 'product'
         });
         productContainer.appendTo($('section.body'));
@@ -123,8 +149,11 @@ function buildProducts(productset){
        
         $('div.product').on('click',function(){
             var itemID = $(this).closest('div').attr('data-product-id');
-            buildPopup(itemID);
-            console.log('product clicked');
+            var itemKey = parseInt($(this).closest('div').attr('data-product-key'));
+//            console.log(itemKey);
+//            console.log(typeof(itemKey));
+            buildPopup(itemID,itemKey);
+//            console.log('product clicked');
         });
     }
 }

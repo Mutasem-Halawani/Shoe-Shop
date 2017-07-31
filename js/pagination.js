@@ -79,8 +79,8 @@ var Pagination = {
     
     MovePage: function(){
             $('section.body').empty();
-            buildProductList();
-            buildProducts(productsNew);
+            buildProductList(Pagination.page);
+            buildProducts();
     },
 
     // --------------------
@@ -156,8 +156,6 @@ var Pagination = {
         Pagination.Start();
     }
 };
-
-
 
 /* * * * * * * * * * * * * * * * *
 * Initialization

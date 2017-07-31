@@ -30,11 +30,11 @@ $('div#nav-icon').on('click',function(){
 });
 
 //popup
-$('div.product').on('click',function(){
-    var itemID = $(this).closest('div').attr('data-product-id');
-    buildPopup(itemID);
-    console.log('product clicked');
-});
+//$('div.product').on('click',function(){
+//    var itemID = $(this).closest('div').attr('data-product-id');
+//    buildPopup(itemID);
+////    console.log('product clicked');
+//});
 
 //add to favs
 $("i.add-to-fav").click(function (e) {
