@@ -6,8 +6,6 @@
 
 function buildPopup(id,key){
     
-//    console.log(id);
-//    console.log(key);
     products = productsNew;
     var index = id;
     var popupContainer = $('<div>',{
@@ -138,9 +136,7 @@ function buildPopup(id,key){
     });
     
     $('.add-to-cart-btn').on('click',function(e,key){
-        var productNumber = parseInt(id);
-//        console.log(key);
-//        var productNumber = key;
+        var productNumber = $(this).parent().parent().find('h3').text();
         cartProducts.push(productNumber);
         console.log(cartProducts);
         localStorage.setItem("products", JSON.stringify(cartProducts));

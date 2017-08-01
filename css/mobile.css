@@ -20,7 +20,6 @@ and open the template in the editor.
 
 header#mobile{
     display: none;
-    /*display: flex;*/
     justify-content: space-between;
     align-items: center;
     font-size: 0.7rem;
@@ -47,7 +46,7 @@ header#mobile span.mobile-cart{
     font-family: 'Myriad Hebrew';
     color: white;
     background-color: black;
-    font-size: 1rem;
+    font-size: 0.6rem;
     border-radius: 50%;
     text-align: center;
     padding: 5px;

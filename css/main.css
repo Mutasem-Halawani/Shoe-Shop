@@ -87,7 +87,7 @@ header#desktop i.fa-shopping-bag{
 
 header#desktop span#items-on-cart{
     position: absolute;
-    font-size: 1rem;
+    font-size: 0.6rem;
     font-family: 'Myriad Hebrew',sans-serif;
     left: -0.2rem;
     bottom: .6rem;

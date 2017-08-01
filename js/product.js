@@ -150,10 +150,23 @@ function buildProducts(productset){
         $('div.product').on('click',function(){
             var itemID = $(this).closest('div').attr('data-product-id');
             var itemKey = parseInt($(this).closest('div').attr('data-product-key'));
-//            console.log(itemKey);
-//            console.log(typeof(itemKey));
             buildPopup(itemID,itemKey);
-//            console.log('product clicked');
         });
+        
     }
+        //add to products
+        $('i.add-to-cart').on('click',function(e){
+            e.stopPropagation();
+            var productNumber = $(this).parent().parent().find('h3').text();
+            cartProducts.push(productNumber);
+            console.log(cartProducts);
+            localStorage.setItem("products", JSON.stringify(cartProducts));
+            $('.cart-items').html(cartProducts.length);
+        });
+        
+        //add to favs
+        $("i.add-to-fav").click(function (e) {
+            e.stopPropagation();
+            $(this).toggleClass('highlight');
+        });
 }
