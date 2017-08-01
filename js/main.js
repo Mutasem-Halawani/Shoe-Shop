@@ -57,8 +57,3 @@ document.onclick = function (e) {
         return false;
     }
 };
-
-//show added products
-$('header#desktop p, span#items-on-cart').on('click',function(){
-    alert('Products in Cart: ' + storedProducts); 
-});
