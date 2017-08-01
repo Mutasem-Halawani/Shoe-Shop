@@ -6,7 +6,7 @@
 
 var cartProducts = [];
 var storedProducts = JSON.parse(localStorage.getItem("products"));
-cartProducts = storedProducts;
+//cartProducts = storedProducts;
 $( document ).ready(function() {
     $('.cart-items').html(storedProducts.length);
 });
