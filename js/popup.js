@@ -110,6 +110,7 @@ function buildPopup(id,key){
     $('i.fa-angle-left').on('click',function(){
         var before = parseInt(id) - 1;
         if(before > 0){
+            $('div#popup-container').remove();
             buildPopup(before);
         }    
     });
@@ -117,6 +118,7 @@ function buildPopup(id,key){
     $('i.fa-angle-right').on('click',function(){
         var next = parseInt(id) + 1;
         if(next < (products.length)){
+            $('div#popup-container').remove();
             buildPopup(next);
         }    
     });

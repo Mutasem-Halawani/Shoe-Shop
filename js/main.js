@@ -27,13 +27,10 @@ $('nav li').hover(function(){
 });
 
 $('nav li').click(function(){
-$('nav li').removeClass('highlight_stay');
-$(this).addClass('highlight_stay');
-
-$('nav li').click(function(){
+    $('nav li').removeClass('highlight_stay');
+    $(this).addClass('highlight_stay');
     $('nav li').removeClass('underline-border');
     $(this).addClass('underline-border');
-});
 });
 
 //pages pagination

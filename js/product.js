@@ -146,14 +146,15 @@ function buildProducts(productset){
            text: products[i].price
        });
        productPrice.appendTo(productPriceCont);
-       
+        
+    }
+    
         $('div.product').on('click',function(){
             var itemID = $(this).closest('div').attr('data-product-id');
             var itemKey = parseInt($(this).closest('div').attr('data-product-key'));
             buildPopup(itemID,itemKey);
         });
         
-    }
         //add to products
         $('i.add-to-cart').on('click',function(e){
             e.stopPropagation();
