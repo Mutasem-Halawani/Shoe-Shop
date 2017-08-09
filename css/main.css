@@ -101,19 +101,18 @@ header#desktop span#items-on-cart{
     line-height: 5px;
 }
 
-
 main{
     width: var(--main-section-width);
     margin: 0 auto;
     padding-bottom: 10%;
 }
+
 main section.header{
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid lightgray;
     margin-bottom: 1.5rem;
     font-family: 'Myriad Hebrew',sans-serif;
-
 }
 
 main section.header nav#desktop-menu ul{

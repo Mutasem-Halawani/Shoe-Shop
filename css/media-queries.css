@@ -12,12 +12,26 @@ and open the template in the editor.
         width: 60%;
     }
 }
+@media screen and (max-width: 1260px){
+    body > main > div > nav > section.mega-menu-body > section{
+        flex-basis: 18%;
+    }
+}
 
 @media screen and (max-width: 1225px){
     div#popup-container div.product-popup{
         padding-bottom: 2rem;
     }
+}
+
+@media screen and (max-width: 1175px){
+    body > main > div > nav > section.mega-menu-body > section{
+        flex-basis: 48%;
+    }
     
+    body > main > div > nav > section.mega-menu-body > section{
+        padding: 0.1rem;
+    }
 }
 
 @media screen and (max-width: 1050px){
@@ -30,6 +44,10 @@ and open the template in the editor.
     div#popup-container div.product-popup{
         width: 45%;
     }
+}
+
+@media screen and (max-width: 1000px){
+    
 }
 
 @media screen and (max-width: 1050px){

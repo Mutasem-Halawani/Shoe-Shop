@@ -6,6 +6,8 @@
 
 var cartProducts = [];
 var storedProducts = JSON.parse(localStorage.getItem("products"));
+var menuItems = $('section.header li');
+var megaMenu = $('div.mega-menu-container');
 //cartProducts = storedProducts;
 $( document ).ready(function() {
     $('.cart-items').html(storedProducts.length);
@@ -18,7 +20,6 @@ $('div#nav-icon').on('click',function(){
     });
 });
 
-
 //nav
 $('nav li').hover(function(){
      $(this).addClass('highlight');
@@ -26,19 +27,54 @@ $('nav li').hover(function(){
      $(this).removeClass('highlight');
 });
 
-$('nav li').click(function(){
-    $('nav li').removeClass('highlight_stay');
-    $(this).addClass('highlight_stay');
-    $('nav li').removeClass('underline-border');
-    $(this).addClass('underline-border');
+//desktop menu
+$('section.header nav li').click(function(e){
+
+    if($(this).hasClass('underline-border')){
+        $(megaMenu).toggleClass(function(){
+            return $(this).is('.hide-mega-menu ,.show-mega-menu') ? 'hide-mega-menu' : 'show-mega-menu';
+        });
+        removeMenuHighlight();
+    }
+    else{
+        removeMenuHighlight();
+        $(this).addClass('highlight_stay');
+        $(this).addClass('underline-border');
+        megaMenu.removeClass('hide-mega-menu');
+        megaMenu.addClass('show-mega-menu');
+    }
+    
+    let chosenCategory = $(this).text();
+    $('section.mega-menu-body > section.first-column h2')[0].textContent = chosenCategory;
 });
+
+$('section.body, div#pagination').on('click',function(){
+        clearMenu();
+});
+
+$(window).on('resize',function(){
+    if($( window).width() < 550){
+        clearMenu();
+    }
+});
+
+function removeMenuHighlight(){
+        $('nav li').removeClass('highlight_stay');
+        $('nav li').removeClass('underline-border');
+}
+
+function clearMenu(){
+        megaMenu.removeClass('show-mega-menu');
+        megaMenu.addClass('hide-mega-menu');
+        $('nav li').removeClass('highlight_stay');
+        $('nav li').removeClass('underline-border');
+}
 
 //pages pagination
 $('div.pagination a.page').click(function(){
     $('div.pagination a.page').removeClass('active');
     $(this).addClass('active');
 });
-
 
 //prevent window scroll on empty link click
 document.onclick = function (e) {

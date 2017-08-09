@@ -148,7 +148,6 @@ function buildProducts(productset){
        productPrice.appendTo(productPriceCont);
         
     }
-    
         $('div.product').on('click',function(){
             var itemID = $(this).closest('div').attr('data-product-id');
             var itemKey = parseInt($(this).closest('div').attr('data-product-key'));
